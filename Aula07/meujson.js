@@ -30,13 +30,33 @@ const dados=[
               
 
  ]
-  const ds =          
+ const ds = JSON.stringify(dados)
+ 
+ localStorage.setItem("bd", ds)
+
+ return ds
+}
+function converte(){
+ const ds = JSON.parse(localStorage.getItem("bd"))
+ localStorage.removeItem("bd")
+ let t =  {
+     id:4,
+     login:"Sara",
+     senha:"4444",
+     email:"sara@gmail.com"
+ }
+ ds.push()
+
+ const json = JSON.stringify(ds)
+ localStorage.setItem("bd", json)
+
+}          
              
 
          
               
 
-    }
+    
            
 
      
